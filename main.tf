@@ -3,8 +3,10 @@ module "vpc" {
   env    = var.env
   tags   = var.tags
 
-  for_each = var.vpc
-  vpc_cidr = each.value["vpc_cidr"]
+  for_each       = var.vpc
+  vpc_cidr       = each.value["vpc_cidr"]
+  public_subnets = each.value["public_subnets"]
+
 }
 
 
