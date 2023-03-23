@@ -84,8 +84,8 @@ module "alb" {
 
 }
 
-module "apps" {
-  source = "git::https://github.com/raghudevopsb71/tf-module-apps.git"
+module "app" {
+  source = "git::https://github.com/raghudevopsb71/tf-module-app.git"
   env    = var.env
   tags   = var.tags
 
