@@ -124,6 +124,7 @@ apps = {
     allow_app_to      = "app"
     alb               = "private"
     listener_priority = 10
+    parameters        = ["docdb"]
   }
   cart = {
     component         = "cart"
@@ -136,6 +137,7 @@ apps = {
     allow_app_to      = "app"
     alb               = "private"
     listener_priority = 11
+    parameters        = ["elasticache"]
   }
   user = {
     component         = "user"
@@ -148,6 +150,7 @@ apps = {
     allow_app_to      = "app"
     alb               = "private"
     listener_priority = 12
+    parameters        = ["docdb", "elasticache"]
   }
   shipping = {
     component         = "shipping"
@@ -160,6 +163,7 @@ apps = {
     allow_app_to      = "app"
     alb               = "private"
     listener_priority = 13
+    parameters        = []
   }
   payment = {
     component         = "payment"
@@ -172,6 +176,7 @@ apps = {
     allow_app_to      = "app"
     alb               = "private"
     listener_priority = 14
+    parameters        = []
   }
   frontend = {
     component         = "frontend"
@@ -184,6 +189,7 @@ apps = {
     allow_app_to      = "public"
     alb               = "public"
     listener_priority = 10
+    parameters        = []
   }
 }
 
