@@ -125,7 +125,7 @@ module "app" {
   listener_arn      = lookup(lookup(lookup(module.alb, each.value["alb"], null), "listener", null), "arn", null)
 }
 
-/*
+
 ### Load Runner
 resource "aws_spot_instance_request" "load-runner" {
   ami                    = data.aws_ami.ami.id
@@ -163,4 +163,3 @@ resource "null_resource" "load-gen" {
     ]
   }
 }
-*/
