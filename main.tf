@@ -176,6 +176,7 @@ module "minikube" {
   aws_subnet_id       = lookup(local.subnet_ids, "public", null)[0]
   hosted_zone         = "Z103214126L48SQW30RSR"
   hosted_zone_private = false
+  ami_image_id        = "ami-02c073b6f8c9e1803"
 
   tags = {
     Name = "Minikube"
