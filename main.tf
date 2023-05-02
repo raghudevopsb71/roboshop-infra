@@ -126,6 +126,7 @@ module "app" {
   listener_arn      = lookup(lookup(lookup(module.alb, each.value["alb"], null), "listener", null), "arn", null)
 }
 
+*/
 
 ### Load Runner
 resource "aws_spot_instance_request" "load-runner" {
@@ -165,7 +166,7 @@ resource "null_resource" "load-gen" {
   }
 }
 
-
+/*
 module "minikube" {
   source = "github.com/scholzj/terraform-aws-minikube"
 
@@ -198,7 +199,6 @@ output "KUBE_CONFIG" {
 }
 
 */
-
 module "eks" {
   source             = "github.com/r-devops/tf-module-eks"
   ENV                = var.env
